@@ -1,9 +1,10 @@
+@use '../../../tailwind-values.scss' as tailwind;
+
 .right-column-wrapper {
   height: calc(100vh - 20px);
 }
 
-// Note: 1280px is tailwind's xl breakpoint
-@media (max-width: 1280px) {
+@media (max-width: tailwind.$xl-breakpoint) {
   .right-column-wrapper {
     height: calc(100vh - 4.5rem);
   }

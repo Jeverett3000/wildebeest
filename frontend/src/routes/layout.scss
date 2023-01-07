@@ -1,3 +1,4 @@
+@use '../tailwind-values.scss' as tailwind;
 
 .main-wrapper {
 	height: 100%;
@@ -10,8 +11,7 @@
 	margin: 0 10px;
 }
 
-// Note: 768px is tailwind's md breakpoint
-@media (max-width: 768px) {
+@media (max-width: tailwind.$md-breakpoint) {
 	.side-column {
 		width: max-content;
 	}
