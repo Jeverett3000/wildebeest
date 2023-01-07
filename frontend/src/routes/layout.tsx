@@ -6,6 +6,7 @@ import LeftColumn from '../components/layout/LeftColumn/LeftColumn'
 import RightColumn from '../components/layout/RightColumn/RightColumn'
 import styles from './layout.scss?inline'
 import { InstanceConfigContext } from '~/utils/instanceConfig'
+import { WildebeestLogo } from '~/components/MastodonLogo'
 
 const pathsWithoutColumns = ['/first-login', '/start-instance']
 
@@ -32,27 +33,37 @@ export default component$(() => {
 	useContextProvider(InstanceConfigContext, instanceLoader.use().value)
 
 	return (
-		<main class="main-wrapper">
-			{showColumns && (
-				<div class="side-column">
-					<div class="sticky">
-						<LeftColumn />
+		<>
+			<header class="bg-slate-800 p-3 w-full border-b border-slate-700 xl:hidden">
+				<a class="no-underline flex items-center" href="https://mastodon.social">
+					<WildebeestLogo size="small" />
+					{/* TODO: We need to move the text inside the logo component for better reusability
+						(because we are adding the text both here and also in the RightColumn component) */}
+					<span class="text-white font-bold text-xl ml-[-27px] mt-[-27px]">ildebeest</span>
+				</a>
+			</header>
+			<main class="main-wrapper">
+				{showColumns && (
+					<div class="side-column hidden xl:block">
+						<div class="sticky">
+							<LeftColumn />
+						</div>
+					</div>
+				)}
+				<div class={`w-full ${showColumns ? 'xl:max-w-lg' : ''}`}>
+					<div class={`bg-slate-800 ${showColumns ? 'rounded ' : 'min-h-screen'}`}>
+						<Slot />
 					</div>
 				</div>
-			)}
-			<div class={`w-full ${showColumns ? 'max-w-lg' : ''}`}>
-				<div class={`bg-slate-800 ${showColumns ? 'rounded ' : 'min-h-screen'}`}>
-					<Slot />
-				</div>
-			</div>
-			{showColumns && (
-				<div class="side-column">
-					<div class="sticky">
-						<RightColumn />
+				{showColumns && (
+					<div class="side-column">
+						<div class="sticky">
+							<RightColumn />
+						</div>
 					</div>
-				</div>
-			)}
-		</main>
+				)}
+			</main>
+		</>
 	)
 })
 

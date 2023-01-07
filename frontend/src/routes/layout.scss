@@ -10,6 +10,13 @@
 	margin: 0 10px;
 }
 
+// Note: 768px is tailwind's md breakpoint
+@media (max-width: 768px) {
+	.side-column {
+		width: max-content;
+	}
+}
+
 .sticky {
 	position: sticky;
 	top: 10px;
