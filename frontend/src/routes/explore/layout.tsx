@@ -47,7 +47,9 @@ export default component$(() => {
 					<span>Explore</span>
 				</h2>
 			</StickyHeader>
-			<div class="bg-slate-900 flex justify-around">{links.map((link) => renderNavLink(link))}</div>
+			<div class="bg-slate-900 flex justify-around relative top-[4.5rem] xl:top-0">
+				{links.map((link) => renderNavLink(link))}
+			</div>
 			<div class="explore-content-wrapper">
 				<Slot />
 			</div>

@@ -34,7 +34,7 @@ export default component$(() => {
 
 	return (
 		<>
-			<header class="h-[4.5rem] z-50 sticky top-0 bg-slate-800 p-3 w-full border-b border-slate-700 xl:hidden">
+			<header class="h-[4.5rem] z-50 fixed top-0 bg-slate-800 p-3 w-full border-b border-slate-700 xl:hidden">
 				<a class="no-underline flex items-center w-max" href="https://mastodon.social">
 					<WildebeestLogo size="small" />
 					{/* TODO: We need to move the text inside the logo component for better reusability
