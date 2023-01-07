@@ -42,14 +42,12 @@ export default component$(() => {
 	return (
 		<div class="explore-wrapper">
 			<StickyHeader>
-				<h2 class="text-reg text-md m-0 p-4 bg-slate-700 rounded-t">
+				<h2 class="text-reg text-md m-0 p-4 bg-slate-700 xl:rounded-t">
 					<i class="fa fa-hashtag fa-fw mr-3" />
 					<span>Explore</span>
 				</h2>
 			</StickyHeader>
-			<div class="bg-slate-900 flex justify-around relative top-[4.5rem] xl:top-0">
-				{links.map((link) => renderNavLink(link))}
-			</div>
+			<div class="bg-slate-900 flex justify-around">{links.map((link) => renderNavLink(link))}</div>
 			<div class="explore-content-wrapper">
 				<Slot />
 			</div>
