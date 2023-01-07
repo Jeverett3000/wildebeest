@@ -34,15 +34,15 @@ export default component$(() => {
 
 	return (
 		<>
-			<header class="bg-slate-800 p-3 w-full border-b border-slate-700 xl:hidden">
-				<a class="no-underline flex items-center" href="https://mastodon.social">
+			<header class="h-[4.5rem] z-50 sticky top-0 bg-slate-800 p-3 w-full border-b border-slate-700 xl:hidden">
+				<a class="no-underline flex items-center w-max" href="https://mastodon.social">
 					<WildebeestLogo size="small" />
 					{/* TODO: We need to move the text inside the logo component for better reusability
 						(because we are adding the text both here and also in the RightColumn component) */}
 					<span class="text-white font-bold text-xl ml-[-27px] mt-[-27px]">ildebeest</span>
 				</a>
 			</header>
-			<main class="main-wrapper">
+			<main class="main-wrapper sticky top-[4.5rem]">
 				{showColumns && (
 					<div class="side-column hidden xl:block">
 						<div class="sticky top-[10px]">
@@ -57,7 +57,7 @@ export default component$(() => {
 				</div>
 				{showColumns && (
 					<div class="side-column">
-						<div class="sticky top-[10px]">
+						<div class="sticky top-[4.5rem] xl:top-[10px]">
 							<RightColumn />
 						</div>
 					</div>

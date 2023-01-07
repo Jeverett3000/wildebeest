@@ -6,6 +6,13 @@
   min-height: calc(100vh - 20px);
 }
 
+// Note: 1280px is tailwind's xl breakpoint
+@media (max-width: 1280px) {
+  .explore-wrapper {
+    min-height: calc(100vh - 4.5rem);
+  }
+}
+
 .explore-content-wrapper {
   flex: 1 1 auto;
 }
