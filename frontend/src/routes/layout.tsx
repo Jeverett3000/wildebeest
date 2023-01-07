@@ -45,7 +45,7 @@ export default component$(() => {
 			<main class="main-wrapper">
 				{showColumns && (
 					<div class="side-column hidden xl:block">
-						<div class="sticky">
+						<div class="sticky top-[10px]">
 							<LeftColumn />
 						</div>
 					</div>
@@ -57,7 +57,7 @@ export default component$(() => {
 				</div>
 				{showColumns && (
 					<div class="side-column">
-						<div class="sticky">
+						<div class="sticky top-[10px]">
 							<RightColumn />
 						</div>
 					</div>
