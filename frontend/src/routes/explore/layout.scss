@@ -1,9 +1,6 @@
 @use '../../tailwind-values.scss' as tailwind;
 
 .explore-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
   min-height: calc(100vh - 20px);
 }
 
@@ -13,12 +10,8 @@
   }
 }
 
-.explore-content-wrapper {
-  flex: 1 1 auto;
-}
-
 .active {
-  color: #dbeafe;
+  color: rgb(220, 235, 254);
   position: relative;
 
   &::before,
