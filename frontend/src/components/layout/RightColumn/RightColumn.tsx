@@ -25,7 +25,7 @@ export default component$(() => {
 
 		return (
 			<Link href={linkTarget} class={classList}>
-				<i class={`fa ${iconName} fa-fw mr-3`} />
+				<i class={`fa ${iconName} fa-fw lg:mr-3`} />
 				<span class="hidden md:inline">{linkText}</span>
 			</Link>
 		)
